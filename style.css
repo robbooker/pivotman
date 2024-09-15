@@ -1,0 +1,23 @@
+/* Basic reset */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #87CEEB; /* Sky blue background */
+}
+
+/* Full-screen canvas container */
+#gameContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#gameCanvas {
+  background: url('city-background.png') no-repeat center center;
+  background-size: cover;
+  width: 800px;
+  height: 600px;
+  border: 1px solid black;
+}
