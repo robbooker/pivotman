@@ -15,7 +15,7 @@ const littleMan = {
   jumpHeight: 150,
   isJumping: false,
   velocityY: 0,
-  gravity: 2,
+  gravity: 0.6, // Reduced gravity to keep the man in the air longer
   image: new Image(),
 };
 
@@ -31,7 +31,10 @@ function drawLittleMan() {
 function jump() {
   if (!littleMan.isJumping) {
     littleMan.isJumping = true;
-    littleMan.velocityY = -20; // Set an upward velocity
+    littleMan.velocityY = -12; // Set an upward velocity (reduced for more controlled rise)
+  } else {
+    // If already jumping, boost him higher with an additional velocity increase
+    littleMan.velocityY = -15; // Boosts him up higher when clicked while in the air
   }
 }
 
